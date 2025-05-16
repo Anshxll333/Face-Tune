@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Mood - Face Tune</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff6b7, #fcd7d7);
+      background-attachment: fixed;
+      overflow-x: hidden;
+      color: #2d3436;
+    }
+
+    .sparkle-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .emotion-container {
+      max-width: 960px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 25px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      padding: 40px;
+      text-align: center;
+      animation: fadeIn 1.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animated-box {
+      opacity: 0;
+      animation: fadeSlideUp 1s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+    .delay-4 { animation-delay: 1.2s; }
+    .delay-5 { animation-delay: 1.5s; }
+    .delay-6 { animation-delay: 1.8s; }
+
+    h1 {
+      font-size: 3.2rem;
+      color: #f39c12;
+      margin-bottom: 25px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #f6b93b; }
+      to { text-shadow: 0 0 20px #f0932b, 0 0 30px #f9ca24; }
+    }
+
+    .emotion-image {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+      margin: 25px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    }
+
+    section {
+      margin-top: 40px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #fffdf7;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    section h2 {
+      color: #e17055;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    section ul {
+      padding-left: 25px;
+      margin-bottom: 0;
+    }
+
+    section li {
+      line-height: 1.8;
+    }
+
+    .songs li::before { content: "🎶 "; }
+    .quotes li::before { content: "💬 "; }
+    .recommendations li::before { content: "✨ "; }
+    .signs li::before { content: "🌟 "; }
+
+    .audio-player {
+      margin-top: 30px;
+      background: #fefefe;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: inset 5px 5px 10px #e0e0e0, inset -5px -5px 10px #ffffff;
+      text-align: center;
+    }
+
+    .audio-player audio {
+      width: 100%;
+      max-width: 450px;
+      margin-top: 10px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 32px;
+      background: linear-gradient(135deg, #f6b93b, #fa983a);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 15px rgba(243, 156, 18, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(243, 156, 18, 0.4);
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkle-bg"></div>
+
+  <div class="emotion-container">
+    <h1>Feeling Happy 😊</h1>
+    <img src="Happy.JPG" alt="Happy Face" class="emotion-image animated-box delay-1">
+
+    <section class="animated-box delay-2">
+      <h2>About the Emotion: Happiness 😊</h2>
+      <p>Happiness is a radiant emotional state marked by joy, optimism, and a deep sense of well-being. It can emerge from small wins, loving connections, or simply appreciating the moment.</p>
+    </section>
+
+    <section class="signs animated-box delay-3">
+      <h2>🌟 Signs of Happiness</h2>
+      <ul>
+        <li>Natural and contagious smiling</li>
+        <li>Relaxed and energetic body language</li>
+        <li>Light-hearted thoughts and optimism</li>
+        <li>Improved energy and alertness</li>
+        <li>Laughter and playful gestures</li>
+      </ul>
+    </section>
+
+    <section class="recommendations animated-box delay-4">
+      <h2>✨ What to Do When You're Happy</h2>
+      <ul>
+        <li>Dance to your favorite songs 🎧</li>
+        <li>Soak in sunlight or take a walk 🌞</li>
+        <li>Express gratitude or journal your thoughts 📝</li>
+        <li>Catch up with friends or family 💬</li>
+        <li>Start a creative project 🎨</li>
+        <li>Share your joy with others 🫂</li>
+      </ul>
+    </section>
+
+    <section class="songs animated-box delay-5">
+      <h2>🎶 Songs to Celebrate Your Mood</h2>
+      <ul>
+        <li>Happy – Pharrell Williams</li>
+        <li>Uptown Funk – Bruno Mars</li>
+        <li>Can't Stop The Feeling! – Justin Timberlake</li>
+      </ul>
+    </section>
+
+    <div class="audio-player animated-box delay-6">
+      <h2>🎧 Sample Happy Tune</h2>
+      <audio controls>
+        <source src="music/happy_sample.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    
+
+    <section class="quotes animated-box delay-6">
+      <h2>💬 Inspiring Happy Quotes</h2>
+      <ul>
+        <li>"Happiness is not something ready made. It comes from your own actions." – Dalai Lama</li>
+        <li>"For every minute you are angry you lose sixty seconds of happiness." – Ralph Waldo Emerson</li>
+        <li>"The purpose of our lives is to be happy." – Dalai Lama</li>
+      </ul>
+    </section>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+</body>
+</html>
